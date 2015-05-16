@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wWX-sn-jrL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--ISecure-->
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdj-C7-N87">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdj-C7-N87">
                                 <rect key="frame" x="277" y="275" width="67" height="30"/>
                                 <state key="normal" title="Go Active">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -25,7 +26,7 @@
                                     <action selector="GoActive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wdr-XM-kCh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jr-bI-8Zl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jr-bI-8Zl">
                                 <rect key="frame" x="277" y="375" width="65" height="30"/>
                                 <state key="normal" title="Go Ofline">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -36,6 +37,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Jr-bI-8Zl" firstAttribute="top" secondItem="sdj-C7-N87" secondAttribute="bottom" constant="70" id="F5p-DA-w3g"/>
+                            <constraint firstItem="sdj-C7-N87" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="211" id="Nry-7L-xVU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Jr-bI-8Zl" secondAttribute="bottom" constant="195" id="bff-uL-rOo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sdj-C7-N87" secondAttribute="trailing" constant="240" id="cjB-xx-Rol"/>
+                            <constraint firstItem="sdj-C7-N87" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="261" id="eLh-EW-hfV"/>
+                            <constraint firstItem="2Jr-bI-8Zl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="261" id="fze-ez-Rgt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Jr-bI-8Zl" secondAttribute="trailing" constant="242" id="gIX-Pn-rtx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ISecure" id="B3r-KA-9ts"/>
                     <connections>
