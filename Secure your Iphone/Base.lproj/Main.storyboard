@@ -62,7 +62,12 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="ISecure" id="B3r-KA-9ts"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="ISecure" id="B3r-KA-9ts">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="K9x-TJ-tL0"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="o3G-xq-sg7"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="goActiveBtn" destination="sdj-C7-N87" id="bl6-PL-SSM"/>
                         <outlet property="goOflineBtn" destination="2Jr-bI-8Zl" id="j0u-Dc-xt6"/>
@@ -71,6 +76,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1048" y="-426"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="exR-jr-jj1">
+            <objects>
+                <viewController id="QKO-72-699" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mk0-fA-OQf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wh0-lT-KXb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OY0-uo-OOA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zk-id-N8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1747" y="-426"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QIN-6s-8rm">
@@ -82,6 +105,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="799-MH-P4m">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5vQ-6a-4tr"/>
                     </connections>

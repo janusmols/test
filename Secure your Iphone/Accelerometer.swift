@@ -33,8 +33,7 @@ class Accelerometer {
     self.z = data.acceleration.z
     
         
-        var timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("checkAccelerometer"), userInfo: nil, repeats: true)
-        timer.invalidate()
+        
     }
     )
     

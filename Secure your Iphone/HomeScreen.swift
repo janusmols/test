@@ -16,7 +16,8 @@ class HomeScreen: UIViewController {
     @IBOutlet weak var goActiveBtn: UIButton!
     @IBOutlet weak var goOflineBtn: UIButton!
 
-
+    var timer: NSTimer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if motionManager.accelerometerAvailable{
@@ -35,15 +36,18 @@ class HomeScreen: UIViewController {
         
         if accelerometerAvalible == true{
         
-            //Accelerometer().retrieveAccelerometerData()
+            Accelerometer().retrieveAccelerometerData()
+            timer?.invalidate()
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: Accelerometer(), selector:Selector("retrieveAccelerometerData") , userInfo: nil, repeats: true)
             
-            var timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: Accelerometer(), selector: Selector("retrieveAccelerometerData"), userInfo: nil, repeats: false)
             
+             
         }
 }
     
     @IBAction func GoOfline(sender: AnyObject) {
         
+        timer?.invalidate()
     }
     
     
