@@ -15,6 +15,10 @@
 		6177A5E51B07949D006C1661 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6177A5E31B07949D006C1661 /* LaunchScreen.xib */; };
 		6177A5F11B07949D006C1661 /* Secure_your_IphoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177A5F01B07949D006C1661 /* Secure_your_IphoneTests.swift */; };
 		6177A5FB1B079F28006C1661 /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177A5FA1B079F28006C1661 /* Accelerometer.swift */; };
+		6177A5FD1B07CA63006C1661 /* loginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177A5FC1B07CA63006C1661 /* loginScreen.swift */; };
+		6177A5FF1B07CC07006C1661 /* ed8f8adda94551f3dc11064577a33a84.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6177A5FE1B07CC07006C1661 /* ed8f8adda94551f3dc11064577a33a84.jpg */; };
+		6177A6011B07CCE4006C1661 /* os-x-10-10-yosemite-valley.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6177A6001B07CCE4006C1661 /* os-x-10-10-yosemite-valley.jpg */; };
+		6177A6051B07E1D7006C1661 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177A6041B07E1D7006C1661 /* SignUpScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,16 @@
 		6177A5EF1B07949D006C1661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6177A5F01B07949D006C1661 /* Secure_your_IphoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secure_your_IphoneTests.swift; sourceTree = "<group>"; };
 		6177A5FA1B079F28006C1661 /* Accelerometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accelerometer.swift; sourceTree = "<group>"; };
+		6177A5FC1B07CA63006C1661 /* loginScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginScreen.swift; sourceTree = "<group>"; };
+		6177A5FE1B07CC07006C1661 /* ed8f8adda94551f3dc11064577a33a84.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ed8f8adda94551f3dc11064577a33a84.jpg; sourceTree = "<group>"; };
+		6177A6001B07CCE4006C1661 /* os-x-10-10-yosemite-valley.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "os-x-10-10-yosemite-valley.jpg"; sourceTree = "<group>"; };
+		6177A6041B07E1D7006C1661 /* SignUpScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		6177A6C71B07F871006C1661 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		6177A6C81B07F871006C1661 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		6177A6C91B07F871006C1661 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		6177A6CA1B07F871006C1661 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		6177A6CB1B07F871006C1661 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		6177A6CC1B07F871006C1661 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +98,8 @@
 				6177A5D71B07949D006C1661 /* AppDelegate.swift */,
 				6177A5DC1B07949D006C1661 /* HomeScreen.swift */,
 				6177A5FA1B079F28006C1661 /* Accelerometer.swift */,
+				6177A5FC1B07CA63006C1661 /* loginScreen.swift */,
+				6177A6041B07E1D7006C1661 /* SignUpScreen.swift */,
 				6177A5DE1B07949D006C1661 /* Main.storyboard */,
 				6177A5E11B07949D006C1661 /* Images.xcassets */,
 				6177A5E31B07949D006C1661 /* LaunchScreen.xib */,
@@ -96,7 +112,10 @@
 		6177A5D51B07949D006C1661 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6177A6C61B07F850006C1661 /* Frameworks */,
 				6177A5D61B07949D006C1661 /* Info.plist */,
+				6177A5FE1B07CC07006C1661 /* ed8f8adda94551f3dc11064577a33a84.jpg */,
+				6177A6001B07CCE4006C1661 /* os-x-10-10-yosemite-valley.jpg */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -116,6 +135,19 @@
 				6177A5EF1B07949D006C1661 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6177A6C61B07F850006C1661 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6177A6C71B07F871006C1661 /* Bolts.framework */,
+				6177A6C81B07F871006C1661 /* Parse.framework */,
+				6177A6C91B07F871006C1661 /* ParseCrashReporting.framework */,
+				6177A6CA1B07F871006C1661 /* ParseFacebookUtils.framework */,
+				6177A6CB1B07F871006C1661 /* ParseFacebookUtilsV4.framework */,
+				6177A6CC1B07F871006C1661 /* ParseUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6177A5E01B07949D006C1661 /* Main.storyboard in Resources */,
+				6177A6011B07CCE4006C1661 /* os-x-10-10-yosemite-valley.jpg in Resources */,
 				6177A5E51B07949D006C1661 /* LaunchScreen.xib in Resources */,
 				6177A5E21B07949D006C1661 /* Images.xcassets in Resources */,
+				6177A5FF1B07CC07006C1661 /* ed8f8adda94551f3dc11064577a33a84.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +256,8 @@
 				6177A5FB1B079F28006C1661 /* Accelerometer.swift in Sources */,
 				6177A5DB1B07949D006C1661 /* Secure_your_Iphone.xcdatamodeld in Sources */,
 				6177A5D81B07949D006C1661 /* AppDelegate.swift in Sources */,
+				6177A5FD1B07CA63006C1661 /* loginScreen.swift in Sources */,
+				6177A6051B07E1D7006C1661 /* SignUpScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +339,9 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/janusbrochmols/Desktop/Xcode projekter/Secure your Iphone/Secure your Iphone/Secure your Iphone-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				"SWIFT_OPTIMIZATION_LEVEL[arch=*]" = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -341,6 +379,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/janusbrochmols/Desktop/Xcode projekter/Secure your Iphone/Secure your Iphone/Secure your Iphone-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -350,9 +389,36 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Secure",
+					your,
+					"Iphone/parse-library-1-2",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Secure",
+					your,
+					"Iphone/parse-library",
+					"/Users/janusbrochmols/Downloads/parse-library-1-3",
+					"$(PROJECT_DIR)/Secure",
+					your,
+					"Iphone/parse-library-1-3",
+					"$(PROJECT_DIR)/Secure",
+					your,
+					Iphone,
+				);
 				INFOPLIST_FILE = "Secure your Iphone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Secure",
+					your,
+					Iphone,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -360,9 +426,35 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Secure",
+					your,
+					"Iphone/parse-library-1-2",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Secure",
+					your,
+					"Iphone/parse-library",
+					"/Users/janusbrochmols/Downloads/parse-library-1-3",
+					"$(PROJECT_DIR)/Secure",
+					your,
+					"Iphone/parse-library-1-3",
+					"$(PROJECT_DIR)/Secure",
+					your,
+					Iphone,
+				);
 				INFOPLIST_FILE = "Secure your Iphone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Secure",
+					your,
+					Iphone,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -373,6 +465,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Secure",
+					your,
+					IphoneTests,
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -380,6 +475,12 @@
 				);
 				INFOPLIST_FILE = "Secure your IphoneTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Secure",
+					your,
+					IphoneTests,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Secure your Iphone.app/Secure your Iphone";
 			};
@@ -392,9 +493,18 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Secure",
+					your,
+					IphoneTests,
 				);
 				INFOPLIST_FILE = "Secure your IphoneTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Secure",
+					your,
+					IphoneTests,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Secure your Iphone.app/Secure your Iphone";
 			};
@@ -419,6 +529,7 @@
 				6177A5F61B07949D006C1661 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6177A5F71B07949D006C1661 /* Build configuration list for PBXNativeTarget "Secure your IphoneTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +538,7 @@
 				6177A5F91B07949D006C1661 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
