@@ -11,6 +11,7 @@ import UIKit
 class loginScreen: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
 
+
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var login: UIButton!
@@ -39,6 +40,29 @@ class loginScreen: UIViewController {
     
     @IBAction func Login(sender: AnyObject) {
         
+        var userEmail = emailTextField.text
+        var userPasword = passwordTextField.text
         
-    }
+        PFUser.logInWithUsernameInBackground(userEmail, password:userPasword) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if user != nil {
+                //login is succesfull
+                
+                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
+                NSUserDefaults.standardUserDefaults().synchronize()
+                self.dismissViewControllerAnimated(true, completion: nil)
+                
+                var homeScreen: HomeScreen = self.storyboard?.instantiateViewControllerWithIdentifier("HomeScreen")as! HomeScreen
+                self.presentViewController(homeScreen, animated: true, completion: nil)
+
+                
+            } else {
+                println("could not find user")
+            }
+        }
+        
+        
+}
+
+
 }
