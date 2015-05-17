@@ -83,6 +83,7 @@ class loginScreen: UIViewController, UITextFieldDelegate {
     
     @IBAction func Login(sender: AnyObject) {
         
+        if(emailTextField != "" && passwordTextField != ""){
         var userEmail = emailTextField.text
         var userPassword = passwordTextField.text
         
@@ -120,7 +121,16 @@ class loginScreen: UIViewController, UITextFieldDelegate {
         }
         
         
+    }
+    else{
+            var myAlert = UIAlertController(title: "All fields required", message: "Log in failed.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){ action in self.dismissViewControllerAnimated(true, completion:nil)
+            }
+            
+            myAlert.addAction(okAction)
+            self.presentViewController(myAlert, animated: true, completion: nil)
+
+    }
 }
-
-
 }
