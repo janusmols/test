@@ -11,8 +11,8 @@ import UIKit
 class loginScreen: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
 
-    @IBOutlet weak var username: UITextField!
-    @IBOutlet weak var password: NSLayoutConstraint!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var login: UIButton!
     
     

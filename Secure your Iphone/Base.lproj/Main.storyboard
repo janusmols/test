@@ -245,8 +245,6 @@
                     <connections>
                         <outlet property="backgroundImage" destination="2hp-7a-W4f" id="YoF-QA-kUl"/>
                         <outlet property="login" destination="85Y-3f-VAe" id="HwV-KL-lVL"/>
-                        <outlet property="password" destination="ihI-0h-OMp" id="5KX-FL-fpR"/>
-                        <outlet property="username" destination="qRN-u3-kNT" id="AqK-IG-DRa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIf-0c-4Go" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -268,7 +266,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="os-x-10-10-yosemite-valley.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cwb-x7-RAa">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fny-fw-nH4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fny-fw-nH4">
                                 <rect key="frame" x="26" y="150" width="548" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Or9-mD-eO1"/>
@@ -281,7 +279,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ShE-Zz-wbh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ShE-Zz-wbh">
                                 <rect key="frame" x="26" y="220" width="548" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -308,6 +306,9 @@
                                         <exclude reference="tRm-lA-urt"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="SignUpBtn:" destination="hfc-aK-BW2" eventType="touchUpInside" id="gbN-yV-kcM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -336,6 +337,9 @@
                     <navigationItem key="navigationItem" title="Sign up" id="VUZ-rW-sfn"/>
                     <connections>
                         <outlet property="backgroundImage" destination="cwb-x7-RAa" id="Sdz-ut-LB7"/>
+                        <outlet property="emailTextField" destination="fny-fw-nH4" id="LUL-vX-31v"/>
+                        <outlet property="passwordTextField" destination="4MV-xG-gwx" id="WtF-Yg-qVd"/>
+                        <outlet property="repeatPasswordTextField" destination="ShE-Zz-wbh" id="scJ-Fi-iif"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsW-Ep-eAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
