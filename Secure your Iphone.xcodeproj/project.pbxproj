@@ -38,6 +38,7 @@
 		6177A7371B0891ED006C1661 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6177A7311B0891ED006C1661 /* ParseFacebookUtilsV4.framework */; };
 		6177A7381B0891ED006C1661 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6177A7321B0891ED006C1661 /* ParseUI.framework */; };
 		6177A73C1B08951C006C1661 /* Bridging header.m in Sources */ = {isa = PBXBuildFile; fileRef = 6177A73B1B08951C006C1661 /* Bridging header.m */; };
+		6177A7421B08FA2A006C1661 /* images-6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 6177A7411B08FA2A006C1661 /* images-6.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		6177A7321B0891ED006C1661 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = ../ParseUI.framework; sourceTree = "<group>"; };
 		6177A73A1B08951B006C1661 /* Secure your Iphone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Secure your Iphone-Bridging-Header.h"; sourceTree = "<group>"; };
 		6177A73B1B08951C006C1661 /* Bridging header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Bridging header.m"; sourceTree = "<group>"; };
+		6177A7411B08FA2A006C1661 /* images-6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "images-6.jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		6177A5D51B07949D006C1661 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6177A7411B08FA2A006C1661 /* images-6.jpeg */,
 				6177A6C61B07F850006C1661 /* Frameworks */,
 				6177A5D61B07949D006C1661 /* Info.plist */,
 				6177A5FE1B07CC07006C1661 /* ed8f8adda94551f3dc11064577a33a84.jpg */,
@@ -281,6 +284,7 @@
 				6177A6011B07CCE4006C1661 /* os-x-10-10-yosemite-valley.jpg in Resources */,
 				6177A5E51B07949D006C1661 /* LaunchScreen.xib in Resources */,
 				6177A5E21B07949D006C1661 /* Images.xcassets in Resources */,
+				6177A7421B08FA2A006C1661 /* images-6.jpeg in Resources */,
 				6177A5FF1B07CC07006C1661 /* ed8f8adda94551f3dc11064577a33a84.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

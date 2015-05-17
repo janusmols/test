@@ -40,6 +40,8 @@ class loginScreen: UIViewController, UITextFieldDelegate {
         effectView.frame  = CGRectMake(0, 0, 2000, 2000)
         
         backgroundImage.addSubview(effectView)
+
+        
 }
     func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
     {
