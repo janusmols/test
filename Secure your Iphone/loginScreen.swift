@@ -52,9 +52,7 @@ class loginScreen: UIViewController {
                 NSUserDefaults.standardUserDefaults().synchronize()
                 self.dismissViewControllerAnimated(true, completion: nil)
                 
-                var homeScreen: HomeScreen = self.storyboard?.instantiateViewControllerWithIdentifier("HomeScreen")as! HomeScreen
-                self.presentViewController(homeScreen, animated: true, completion: nil)
-
+             self.performSegueWithIdentifier("pushToHomeScreen", sender: self)
                 
             } else {
                 println("could not find user")

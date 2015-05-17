@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xqc-vw-RI0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -14,11 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jr-bI-8Zl">
-                                <rect key="frame" x="277" y="343" width="65" height="30"/>
+                                <rect key="frame" x="277" y="375" width="65" height="30"/>
                                 <state key="normal" title="Go Ofline">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdj-C7-N87">
-                                <rect key="frame" x="277" y="243" width="67" height="30"/>
+                                <rect key="frame" x="277" y="275" width="67" height="30"/>
                                 <state key="normal" title="Go Active">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196" y="-412"/>
+            <point key="canvasLocation" x="1828" y="-412"/>
         </scene>
         <!--Login-->
         <scene sceneID="JVZ-fK-jid">
@@ -239,19 +239,18 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="96K-nN-uZC">
-                        <barButtonItem key="backBarButtonItem" title="Login" id="Rbr-p4-6Ul"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Login" id="96K-nN-uZC"/>
                     <connections>
                         <outlet property="backgroundImage" destination="2hp-7a-W4f" id="YoF-QA-kUl"/>
                         <outlet property="emailTextField" destination="qRN-u3-kNT" id="tsX-zw-khm"/>
                         <outlet property="login" destination="85Y-3f-VAe" id="HwV-KL-lVL"/>
                         <outlet property="passwordTextField" destination="xDv-Ty-eYl" id="H1N-b1-kCd"/>
+                        <segue destination="BYZ-38-t0r" kind="push" identifier="pushToHomeScreen" id="HIq-uJ-Q37"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIf-0c-4Go" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="374" y="-412"/>
+            <point key="canvasLocation" x="1186" y="-412"/>
         </scene>
         <!--Sign up-->
         <scene sceneID="0IH-Th-6mL">
@@ -358,7 +357,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Wh0-lT-KXb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OY0-uo-OOA">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -366,29 +365,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zk-id-N8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1819" y="-412"/>
+            <point key="canvasLocation" x="2631" y="-412"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="QIN-6s-8rm">
+        <scene sceneID="YQ4-X8-or7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lME-4B-g9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" toolbarHidden="NO" id="wWX-sn-jrL" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xqc-vw-RI0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="qJ2-ZU-zWV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GeK-hO-Oqo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="799-MH-P4m">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5vQ-6a-4tr"/>
+                        <segue destination="aVQ-Ts-4O8" kind="relationship" relationship="rootViewController" id="DyL-Bn-MNU"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q2h-bG-IpD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="-1095"/>
+            <point key="canvasLocation" x="374" y="-412"/>
         </scene>
     </scenes>
     <resources>
