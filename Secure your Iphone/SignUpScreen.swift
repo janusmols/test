@@ -61,45 +61,58 @@ class SignUpScreen: UIViewController, UITextFieldDelegate {
         if userEmail != "" && userPassword != "" && userRepeatPassword != "" {
          
         } else {
-            //self.messageLabel.text = "All Fields Required"
+            var myAlert = UIAlertController(title: "All fields required", message: "Registration failed.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){ action in self.dismissViewControllerAnimated(true, completion:nil)
+            }
+            
+            myAlert.addAction(okAction)
+            self.presentViewController(myAlert, animated: true, completion: nil)
+
         }
         
         if(userPassword != userRepeatPassword){
             //displayMyAlertMessage("Passwords do not match")
-            return
+            var myAlert = UIAlertController(title: "Passwords do not match", message: "Registration failed.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){ action in self.dismissViewControllerAnimated(true, completion:nil)
+            }
+            
+            myAlert.addAction(okAction)
+            self.presentViewController(myAlert, animated: true, completion: nil)
         }
 
+        if(userPassword == userRepeatPassword && userEmail != "" && userPassword != "" && userRepeatPassword != ""){
         //store data
         var user:PFUser = PFUser()
         user.username = userEmail
         user.password = userPassword
-        user.email = userEmail
+        //user.email = userEmail
+        
         
         user.signUpInBackgroundWithBlock {
             (succeeded, error) -> Void in
             
             //user successfuly registered
-            var myAlert = UIAlertController(title: "Alert", message: "Registration is succesful. Thank you!", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){ action in self.dismissViewControllerAnimated(true, completion:nil)
-        }
-            
-            myAlert.addAction(okAction)
+            var myAlert = UIAlertController(title: "Thank you!", message: "Registration is succesful.", preferredStyle: UIAlertControllerStyle.Alert)
             self.presentViewController(myAlert, animated: true, completion: nil)
+            myAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+                switch action.style{
+                case .Default:
+                    self.performSegueWithIdentifier("PushToLoginScreen", sender: self)
+                case .Cancel:
+                    println("cancel")
+                    
+                case .Destructive:
+                    println("destructive")
+                }
+                }
+                )
+            )
 
 }
     
-    
-    func userSignUp() {
-    
-        
-        
-        
-        
 }
+    }
     
-
-
-
-}
 }

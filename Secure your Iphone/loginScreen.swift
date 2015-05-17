@@ -9,6 +9,8 @@
 import UIKit
 
 class loginScreen: UIViewController, UITextFieldDelegate {
+    var userDefaults = NSUserDefaults.standardUserDefaults()
+    
     @IBOutlet weak var backgroundImage: UIImageView!
 
 
@@ -16,9 +18,11 @@ class loginScreen: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var login: UIButton!
     
+    @IBOutlet weak var rememberMyPasswordSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         emailTextField.delegate = self
         passwordTextField.delegate = self
@@ -30,6 +34,13 @@ class loginScreen: UIViewController, UITextFieldDelegate {
         addEffect()
     }
 
+    override func viewWillAppear(animated: Bool) {
+        self.navigationItem.setHidesBackButton(true, animated:true)
+        
+        emailTextField.text = userDefaults.valueForKey("savedUserEmail") as! String
+        passwordTextField.text = userDefaults.valueForKey("savedUserPassword") as! String
+    }
+    
     func addEffect()
     {
         //add blur to background
@@ -57,17 +68,42 @@ class loginScreen: UIViewController, UITextFieldDelegate {
         super.touchesBegan(touches , withEvent:event)
     }
     
+    @IBAction func Switchaction(sender: AnyObject) {
+        if(!rememberMyPasswordSwitch.on){
+            self.userDefaults.setValue("", forKey: "savedUserEmail")
+            self.userDefaults.synchronize() // don't forget this!!!!
+            //save password
+            self.userDefaults.setValue("", forKey: "savedUserPassword")
+            self.userDefaults.synchronize() // don't forget this!!!!
+            emailTextField.text = userDefaults.valueForKey("savedUserEmail") as! String
+            passwordTextField.text = userDefaults.valueForKey("savedUserPassword") as! String
+
+        }
+    }
     
     @IBAction func Login(sender: AnyObject) {
         
         var userEmail = emailTextField.text
-        var userPasword = passwordTextField.text
+        var userPassword = passwordTextField.text
         
-        PFUser.logInWithUsernameInBackground(userEmail, password:userPasword) {
+        PFUser.logInWithUsernameInBackground(userEmail, password:userPassword) {
             (user: PFUser?, error: NSError?) -> Void in
             if user != nil {
                 //login is succesfull
                 
+                if(self.rememberMyPasswordSwitch.on){
+                    //Save email
+                    
+                    self.userDefaults.setValue(userEmail, forKey: "savedUserEmail")
+                    self.userDefaults.synchronize() // don't forget this!!!!
+                    //save password
+                    self.userDefaults.setValue(userPassword, forKey: "savedUserPassword")
+                    self.userDefaults.synchronize() // don't forget this!!!!
+                    
+                    println(self.userDefaults.valueForKey("savedUserEmail"))
+                    println(self.userDefaults.valueForKey("savedUserPassword"))
+                }
+           
                 NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
                 NSUserDefaults.standardUserDefaults().synchronize()
                 self.dismissViewControllerAnimated(true, completion: nil)
