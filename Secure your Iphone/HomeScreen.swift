@@ -20,6 +20,8 @@ class HomeScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         if motionManager.accelerometerAvailable{
             accelerometerAvalible = true
                     }

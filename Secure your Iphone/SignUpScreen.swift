@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpScreen: UIViewController {
+class SignUpScreen: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var backgroundImage: UIImageView!
 
     @IBOutlet weak var emailTextField: UITextField!
@@ -17,6 +17,10 @@ class SignUpScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        repeatPasswordTextField.delegate = self
         
         addEffect()
 }
@@ -31,6 +35,21 @@ class SignUpScreen: UIViewController {
         
         backgroundImage.addSubview(effectView)
 }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
+    
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        if let touch = touches.first as? UITouch {
+            self.view.endEditing(true)
+        }
+        super.touchesBegan(touches , withEvent:event)
+    }
+
     
     
     @IBAction func SignUpBtn(sender: AnyObject) {

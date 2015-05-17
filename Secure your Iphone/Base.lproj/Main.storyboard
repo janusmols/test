@@ -105,6 +105,7 @@
                                     <constraint firstAttribute="height" constant="111" id="nNa-LT-BBd"/>
                                 </constraints>
                                 <state key="normal" title="Log in to Phone sceure">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -123,9 +124,9 @@
                                     <action selector="Login:" destination="aVQ-Ts-4O8" eventType="touchUpInside" id="KwI-JR-xMS"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qRN-u3-kNT">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.80000000000000016" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qRN-u3-kNT">
                                 <rect key="frame" x="26" y="179" width="548" height="35"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="2zD-tJ-Crb"/>
                                     <constraint firstAttribute="width" constant="159" id="WUC-EQ-RpL"/>
@@ -138,9 +139,9 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xDv-Ty-eYl">
+                            <textField opaque="NO" clipsSubviews="YES" alpha="0.79999999999999982" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xDv-Ty-eYl">
                                 <rect key="frame" x="26" y="214" width="548" height="35"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                             </textField>
@@ -250,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIf-0c-4Go" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1186" y="-412"/>
+            <point key="canvasLocation" x="1078" y="-424"/>
         </scene>
         <!--Sign up-->
         <scene sceneID="0IH-Th-6mL">
@@ -346,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fsW-Ep-eAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="374" y="-1095"/>
+            <point key="canvasLocation" x="1138" y="-1128"/>
         </scene>
         <!--Settings-->
         <scene sceneID="exR-jr-jj1">

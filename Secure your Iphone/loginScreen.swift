@@ -8,7 +8,7 @@
 
 import UIKit
 
-class loginScreen: UIViewController {
+class loginScreen: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var backgroundImage: UIImageView!
 
 
@@ -19,12 +19,20 @@ class loginScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        //The back button for the sign up screen is "log in"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Log in", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        
+        //call the blur effect func
         addEffect()
     }
 
     func addEffect()
     {
+        //add blur to background
         var effect =  UIBlurEffect(style: UIBlurEffectStyle.Light)
         
         var effectView  = UIVisualEffectView(effect: effect)
@@ -32,9 +40,19 @@ class loginScreen: UIViewController {
         effectView.frame  = CGRectMake(0, 0, 2000, 2000)
         
         backgroundImage.addSubview(effectView)
-        
-        
-        
+}
+    func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
+    
+
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        if let touch = touches.first as? UITouch {
+            self.view.endEditing(true)
+        }
+        super.touchesBegan(touches , withEvent:event)
     }
     
     
@@ -52,7 +70,11 @@ class loginScreen: UIViewController {
                 NSUserDefaults.standardUserDefaults().synchronize()
                 self.dismissViewControllerAnimated(true, completion: nil)
                 
-             self.performSegueWithIdentifier("pushToHomeScreen", sender: self)
+                //The back button for the Home screen is "log out"
+                self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Log out", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+                //Push to HomeViewcontroller
+                self.performSegueWithIdentifier("pushToHomeScreen", sender: self)
+                
                 
             } else {
                 println("could not find user")
