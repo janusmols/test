@@ -123,6 +123,7 @@ class loginScreen: UIViewController, UITextFieldDelegate {
                 self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Log out", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
                 //Push to HomeViewcontroller
                 self.performSegueWithIdentifier("pushToHomeScreen", sender: self)
+
                 
                 
             } else {
