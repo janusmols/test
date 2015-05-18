@@ -328,7 +328,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.79999999999999982" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fny-fw-nH4">
-                                <rect key="frame" x="16" y="162" width="568" height="35"/>
+                                <rect key="frame" x="16" y="182" width="568" height="35"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Or9-mD-eO1"/>
@@ -337,19 +337,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.79999999999999982" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4MV-xG-gwx">
-                                <rect key="frame" x="16" y="197" width="568" height="35"/>
+                                <rect key="frame" x="16" y="217" width="568" height="35"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" alpha="0.79999999999999982" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ShE-Zz-wbh">
-                                <rect key="frame" x="16" y="232" width="568" height="35"/>
+                                <rect key="frame" x="16" y="252" width="568" height="35"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qp5-5X-5tB">
-                                <rect key="frame" x="16" y="275" width="568" height="30"/>
+                                <rect key="frame" x="16" y="295" width="568" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="111" id="ZsT-bD-9hJ"/>
@@ -387,7 +387,7 @@
                             <constraint firstItem="cwb-x7-RAa" firstAttribute="top" secondItem="5or-0e-nqz" secondAttribute="topMargin" id="Nlm-XE-TbX"/>
                             <constraint firstAttribute="centerX" secondItem="qp5-5X-5tB" secondAttribute="centerX" id="OTy-l2-w8k"/>
                             <constraint firstAttribute="centerY" secondItem="fny-fw-nH4" secondAttribute="centerY" constant="101" id="Q3N-Lb-anH"/>
-                            <constraint firstAttribute="centerY" secondItem="qp5-5X-5tB" secondAttribute="centerY" constant="10" id="Q9j-8a-LJW"/>
+                            <constraint firstAttribute="centerY" secondItem="qp5-5X-5tB" secondAttribute="centerY" constant="-10" id="Q9j-8a-LJW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fny-fw-nH4" secondAttribute="trailing" id="Ysp-WW-sVL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cwb-x7-RAa" secondAttribute="trailing" constant="-16" id="a41-pp-pn0"/>
                             <constraint firstItem="ShE-Zz-wbh" firstAttribute="height" secondItem="fny-fw-nH4" secondAttribute="height" id="a4F-bn-vk8"/>
@@ -461,6 +461,6 @@
         <image name="os-x-10-10-yosemite-valley.jpg" width="1024" height="683"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kKt-Zr-Ybw"/>
+        <segue reference="DyL-Bn-MNU"/>
     </inferredMetricsTieBreakers>
 </document>

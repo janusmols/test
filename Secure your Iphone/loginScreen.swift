@@ -37,8 +37,8 @@ class loginScreen: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(animated: Bool) {
         self.navigationItem.setHidesBackButton(true, animated:true)
         
-        emailTextField.text = userDefaults.valueForKey("savedUserEmail") as! String
-        passwordTextField.text = userDefaults.valueForKey("savedUserPassword") as! String
+        //emailTextField.text = userDefaults.valueForKey("savedUserEmail") as! String
+       // passwordTextField.text = userDefaults.valueForKey("savedUserPassword") as! String
     }
     
     func addEffect()
@@ -83,12 +83,26 @@ class loginScreen: UIViewController, UITextFieldDelegate {
     
     @IBAction func Login(sender: AnyObject) {
         
-        if(emailTextField != "" && passwordTextField != ""){
+        if(emailTextField.text != "" && passwordTextField.text != ""){
         var userEmail = emailTextField.text
         var userPassword = passwordTextField.text
         
         PFUser.logInWithUsernameInBackground(userEmail, password:userPassword) {
             (user: PFUser?, error: NSError?) -> Void in
+            
+            if user == nil{
+            println("no user")
+                var myAlert = UIAlertController(title: "Could not find user", message: "Log in failed.", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){ action in self.dismissViewControllerAnimated(true, completion:nil)
+                }
+                
+                myAlert.addAction(okAction)
+                self.presentViewController(myAlert, animated: true, completion: nil)
+                
+
+            }
+            
             if user != nil {
                 //login is succesfull
                 
@@ -104,10 +118,6 @@ class loginScreen: UIViewController, UITextFieldDelegate {
                     println(self.userDefaults.valueForKey("savedUserEmail"))
                     println(self.userDefaults.valueForKey("savedUserPassword"))
                 }
-           
-                NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
-                NSUserDefaults.standardUserDefaults().synchronize()
-                self.dismissViewControllerAnimated(true, completion: nil)
                 
                 //The back button for the Home screen is "log out"
                 self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Log out", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
@@ -121,8 +131,9 @@ class loginScreen: UIViewController, UITextFieldDelegate {
         }
         
         
-    }
-    else{
+        }
+        
+        if(emailTextField.text == "" || passwordTextField.text == ""){
             var myAlert = UIAlertController(title: "All fields required", message: "Log in failed.", preferredStyle: UIAlertControllerStyle.Alert)
             
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){ action in self.dismissViewControllerAnimated(true, completion:nil)
@@ -131,6 +142,6 @@ class loginScreen: UIViewController, UITextFieldDelegate {
             myAlert.addAction(okAction)
             self.presentViewController(myAlert, animated: true, completion: nil)
 
-    }
-}
+        }
+   }
 }

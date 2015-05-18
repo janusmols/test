@@ -87,32 +87,75 @@ class SignUpScreen: UIViewController, UITextFieldDelegate {
         var user:PFUser = PFUser()
         user.username = userEmail
         user.password = userPassword
-        //user.email = userEmail
+        user.email = userEmail
         
         
         user.signUpInBackgroundWithBlock {
             (succeeded, error) -> Void in
-            
-            //user successfuly registered
-            var myAlert = UIAlertController(title: "Thank you!", message: "Registration is succesful.", preferredStyle: UIAlertControllerStyle.Alert)
-            self.presentViewController(myAlert, animated: true, completion: nil)
-            myAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-                switch action.style{
-                case .Default:
+            if error == nil{
+            //succeeded
+                //user successfuly registered
+                var myAlert = UIAlertController(title: "Thank you!", message: "Registration is succesful.", preferredStyle: UIAlertControllerStyle.Alert)
+                self.presentViewController(myAlert, animated: true, completion: nil)
+                myAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+                    switch action.style{
+                    case .Default:
                     self.performSegueWithIdentifier("PushToLoginScreen", sender: self)
-                case .Cancel:
-                    println("cancel")
-                    
-                case .Destructive:
-                    println("destructive")
-                }
-                }
+                    case .Cancel:
+                        println("cancel")
+                        
+                    case .Destructive:
+                        println("destructive")
+                    }
+                    }
+                    )
                 )
-            )
+            }else{
+               var errorCode = error?.code
+            switch errorCode!{
+              case 125:
+                var myAlert = UIAlertController(title: "invalid E-mail", message: "Registration failed.", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){ action in self.dismissViewControllerAnimated(true, completion:nil)
+                }
+                
+                myAlert.addAction(okAction)
+                self.presentViewController(myAlert, animated: true, completion: nil)
+                break
+                
+            case 202:
+                var myAlert = UIAlertController(title: "E-mail is already in use", message: "Registration failed.", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){ action in self.dismissViewControllerAnimated(true, completion:nil)
+                }
+                
+                myAlert.addAction(okAction)
+                self.presentViewController(myAlert, animated: true, completion: nil)
+                break
+            
+            case 100:
+                var myAlert = UIAlertController(title: "Connection Failed", message: "Registration failed.", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){ action in self.dismissViewControllerAnimated(true, completion:nil)
+                }
+                
+                myAlert.addAction(okAction)
+                self.presentViewController(myAlert, animated: true, completion: nil)
+                break
+
+   
+            default:
+                break
+            }
+            
+            }
+
+          }
+    
+       }
+     }
+    
 
 }
     
-}
-    }
-    
-}
+

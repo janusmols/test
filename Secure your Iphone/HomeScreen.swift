@@ -16,7 +16,7 @@ class HomeScreen: UIViewController {
     @IBOutlet weak var goActiveBtn: UIButton!
     @IBOutlet weak var goOflineBtn: UIButton!
 
-    var timer: NSTimer?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,14 @@ class HomeScreen: UIViewController {
         else{
             accelerometerAvalible = false
             println("Accelerometer is not available, Your device need to have a accelerometer.")
+            var myAlert = UIAlertController(title: "accelerometer is a requirement", message: "Your device ned a accelerometer.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){ action in self.dismissViewControllerAnimated(true, completion:nil)
+            }
+            
+            myAlert.addAction(okAction)
+            self.presentViewController(myAlert, animated: true, completion: nil)
+
         }
         
 }
@@ -38,18 +46,17 @@ class HomeScreen: UIViewController {
         
         if accelerometerAvalible == true{
         
-            Accelerometer().retrieveAccelerometerData()
-            timer?.invalidate()
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: Accelerometer(), selector:Selector("retrieveAccelerometerData") , userInfo: nil, repeats: true)
-            
-            
-             
+            Accelerometer().retrieveAccelerometerData(false)
+
         }
 }
     
+    
+
+    
     @IBAction func GoOfline(sender: AnyObject) {
+       Accelerometer().retrieveAccelerometerData(true)
         
-        timer?.invalidate()
     }
     
     
